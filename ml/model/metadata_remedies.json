@@ -1,0 +1,76 @@
+{
+  "_description": "Home Remedies Database (generated from metadata/remedies.csv)",
+  "_stage": "home_remedies",
+  "remediesDatabase": {
+    "acne": [
+      "Tea tree oil (diluted)",
+      "Aloe vera gel",
+      "Honey & Cinnamon mask",
+      "Warm salt compress",
+      "Antibacterial soap",
+      "Tea tree oil",
+      "Ketoconazole wash",
+      "Honey mask",
+      "Oil-free hydration",
+      "Ice compress",
+      "Spearmint tea",
+      "Zing supplement (dietary)",
+      "Gentle cleansing",
+      "Salt water soak",
+      "Garlic rub",
+      "Honey",
+      "Steam facial",
+      "Clay mask",
+      "Salicylic acid wash"
+    ],
+    "dry": [
+      "Oatmeal bath",
+      "Coconut oil moisturizer",
+      "Sunflower seed oil",
+      "Epsom salt soak",
+      "Apple cider vinegar (diluted)",
+      "Turmeric paste",
+      "Gentle physical exfoliation",
+      "Urea-based lotions",
+      "Moisturize often",
+      "Identify & Remove trigger",
+      "Calamine lotion",
+      "Aloe vera gel"
+    ],
+    "oily": [
+      "Green tea compress",
+      "Cucumber slices",
+      "Oatmask mask",
+      "Apple cider vinegar soak",
+      "Peppermint oil",
+      "Gentle cleansing",
+      "Ice facial",
+      "Clay mask",
+      "Egg white mask"
+    ],
+    "normal": [
+      "Cucumber cooling",
+      "Aloe vera hydration",
+      "Rose water mist",
+      "Rose water",
+      "Aloe vera",
+      "Cucumber"
+    ],
+    "pigmentation": [
+      "Lemon juice (limited)",
+      "Yogurt cooling mask",
+      "Turmeric & Milk",
+      "Ginger juice rub",
+      "Papaya paste",
+      "Radish seed paste",
+      "Aloe vera",
+      "Vitamin E oil",
+      "Niacinamide rich mask",
+      "Lemon juice (spot)",
+      "Vitamin E",
+      "Pomegranate juice",
+      "Yogurt mask",
+      "Sun protection"
+    ]
+  }
+}

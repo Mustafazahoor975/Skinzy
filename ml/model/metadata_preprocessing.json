@@ -1,0 +1,32 @@
+{
+  "_description": "Image Preprocessing Stage - Step 3 of the FaceMed AI Pipeline",
+  "_stage": "preprocessing",
+  "resize": {
+    "targetWidth": 64,
+    "targetHeight": 64,
+    "method": "bilinear",
+    "description": "All input images are resized to 64x64 pixels so the CNN receives a fixed-size tensor regardless of the original image dimensions."
+  },
+  "normalization": {
+    "method": "minMax",
+    "inputRange": [0, 255],
+    "outputRange": [0.0, 1.0],
+    "formula": "pixel_normalized = pixel_raw / 255.0",
+    "description": "Each pixel RGB value (0-255) is divided by 255 to produce a float in [0,1]. This stabilizes gradient descent during training and speeds up convergence.",
+    "examples": [
+      { "raw": 255, "normalized": 1.0 },
+      { "raw": 128, "normalized": 0.502 },
+      { "raw": 0,   "normalized": 0.0 }
+    ]
+  },
+  "colorSpace": {
+    "format": "RGB",
+    "channels": 3,
+    "channelOrder": ["Red", "Green", "Blue"],
+    "description": "Images are kept in RGB format. No color space conversion (e.g. LAB or HSV) is applied at the preprocessing stage."
+  },
+  "tensorShape": {
+    "input": [1, 64, 64, 3],
+    "description": "Final tensor shape fed into the CNN: [batch_size=1, height=64, width=64, channels=3]"
+  }
+}

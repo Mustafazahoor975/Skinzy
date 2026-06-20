@@ -1,0 +1,233 @@
+{
+  "_description": "Severity Levels (generated from metadata/severity.csv)",
+  "_stage": "severity_scoring",
+  "severityLevels": {
+    "acne": [
+      {
+        "min": 0.0,
+        "max": 0.34,
+        "label": "Mild Acne",
+        "color": "#22c55e",
+        "badge": "MILD",
+        "description": "Maintain good hygiene and use recommended products.",
+        "dos": [
+          "Use salicylic acid facewash",
+          "Apply adapalene at night",
+          "Keep skin moisturized",
+          "Wash face 2x daily"
+        ],
+        "donts": [
+          "Don't pick or pop pimples",
+          "Don't use oily creams",
+          "Don't over-wash",
+          "Avoid junk/greasy food"
+        ],
+        "doctorRequired": false,
+        "urgency": "Low — manageable at home"
+      },
+      {
+        "min": 0.35,
+        "max": 0.69,
+        "label": "Moderate Acne",
+        "color": "#ffd700",
+        "badge": "MODERATE",
+        "description": "Acne around jawline/chin. Manage stress and diet.",
+        "dos": [
+          "Use gentle cleansers",
+          "Avoid dairy/sugar",
+          "Manage stress"
+        ],
+        "donts": [
+          "Don't over-exfoliate",
+          "Don't pick",
+          "Avoid heavy makeup"
+        ],
+        "doctorRequired": false,
+        "urgency": "Low — manageable at home"
+      },
+      {
+        "min": 0.7,
+        "max": 1.0,
+        "label": "Severe Acne",
+        "color": "#ef4444",
+        "badge": "SEVERE",
+        "description": "Painful deep spots. Seek professional treatment.",
+        "dos": [
+          "Use ice to reduce swelling",
+          "Use gentle cleansers",
+          "Follow medical advice"
+        ],
+        "donts": [
+          "Don't pick or squeeze (can cause deep scarring)",
+          "Don't delay treatment"
+        ],
+        "doctorRequired": true,
+        "urgency": "High — consult dermatologist"
+      }
+    ],
+    "dry": [
+      {
+        "min": 0.0,
+        "max": 0.34,
+        "label": "Mild Dry",
+        "color": "#22c55e",
+        "badge": "MILD",
+        "description": "Rough tiny bumps. Use Keratolytic moisturizers.",
+        "dos": [
+          "Exfoliate gently",
+          "Use Urea-based moisturizers",
+          "Stay hydrated"
+        ],
+        "donts": [
+          "Don't scrub harshly",
+          "Don't pick",
+          "Avoid hot water"
+        ],
+        "doctorRequired": false,
+        "urgency": "Low — manageable at home"
+      },
+      {
+        "min": 0.35,
+        "max": 0.69,
+        "label": "Moderate Dry",
+        "color": "#ffd700",
+        "badge": "MODERATE",
+        "description": "Keep skin hydrated with fragrance-free moisturizers.",
+        "dos": [
+          "Use strong moisturizer",
+          "Use soap-free cleanser",
+          "Keep skin hydrated"
+        ],
+        "donts": [
+          "Avoid hot showers",
+          "Avoid fragrance products",
+          "Don't scratch"
+        ],
+        "doctorRequired": false,
+        "urgency": "Low — manageable at home"
+      },
+      {
+        "min": 0.7,
+        "max": 1.0,
+        "label": "Severe Dry",
+        "color": "#ef4444",
+        "badge": "SEVERE",
+        "description": "Use specialized creams and consult a doctor.",
+        "dos": [
+          "Moisturize regularly",
+          "Use medicated creams",
+          "Manage stress"
+        ],
+        "donts": [
+          "Avoid alcohol & smoking",
+          "Don't pick scales",
+          "Avoid harsh skincare"
+        ],
+        "doctorRequired": true,
+        "urgency": "High — consult dermatologist"
+      }
+    ],
+    "oily": [
+      {
+        "min": 0.0,
+        "max": 0.34,
+        "label": "Mild Oily",
+        "color": "#22c55e",
+        "badge": "MILD",
+        "description": "Small yellowish bumps. Harmless but treatable by pro.",
+        "dos": [
+          "Use gentle exfoliation",
+          "Consult pro for laser/cautery"
+        ],
+        "donts": [
+          "Don't squeeze",
+          "Don't use heavy oils"
+        ],
+        "doctorRequired": false,
+        "urgency": "Low — manageable at home"
+      },
+      {
+        "min": 0.35,
+        "max": 0.69,
+        "label": "Moderate Oily",
+        "color": "#ffd700",
+        "badge": "MODERATE",
+        "description": "Use gentle cleansers and avoid sun exposure.",
+        "dos": [
+          "Use gentle cleanser",
+          "Apply sunscreen daily",
+          "Use soothing products (niacinamide)"
+        ],
+        "donts": [
+          "Avoid spicy food",
+          "Avoid hot drinks & heat",
+          "No harsh scrubs"
+        ],
+        "doctorRequired": false,
+        "urgency": "Low — manageable at home"
+      }
+    ],
+    "normal": [
+      {
+        "min": 0.0,
+        "max": 1.0,
+        "label": "Normal Normal",
+        "color": "#22c55e",
+        "badge": "HEALTHY",
+        "description": "Maintain current routine and apply sunscreen.",
+        "dos": [
+          "Sunscreen is MUST",
+          "Keep it simple",
+          "Stay consistent"
+        ],
+        "donts": [
+          "Avoid DIY random treatments",
+          "Don't overdo routine"
+        ],
+        "doctorRequired": false,
+        "urgency": "Low — manageable at home"
+      }
+    ],
+    "pigmentation": [
+      {
+        "min": 0.0,
+        "max": 0.34,
+        "label": "Mild Pigmentation",
+        "color": "#22c55e",
+        "badge": "MILD",
+        "description": "Use Vitamin C serums and daily sun protection.",
+        "dos": [
+          "Use Vitamin C / Niacinamide",
+          "Use sunscreen daily",
+          "Be patient"
+        ],
+        "donts": [
+          "Don't pick or squeeze (creates new PIH)",
+          "Avoid sun exposure"
+        ],
+        "doctorRequired": false,
+        "urgency": "Low — manageable at home"
+      },
+      {
+        "min": 0.35,
+        "max": 0.69,
+        "label": "Moderate Pigmentation",
+        "color": "#ffd700",
+        "badge": "MODERATE",
+        "description": "Wear sunscreen daily and avoid direct sun.",
+        "dos": [
+          "Use sunscreen (MUST)",
+          "Use Vitamin C / Niacinamide",
+          "Use gentle skincare"
+        ],
+        "donts": [
+          "Avoid sun exposure",
+          "Don't use harsh chemicals",
+          "Don't ignore it"
+        ],
+        "doctorRequired": false,
+        "urgency": "Low — manageable at home"
+      }
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "_description": "Model Architecture Documentation - FaceMed CNN Skin Classifier",
+  "_stage": "model_architecture",
+  "modelName": "FaceMed CNN Skin Classifier",
+  "version": "2.1.0",
+  "framework": "TensorFlow.js (Client-side, runs in browser)",
+  "executionEnvironment": "Browser / Node.js — No server required",
+  "totalParameters": 101941,
+  "trainableParameters": 101941,
+  "nonTrainableParameters": 0,
+  "inputSpec": {
+    "shape": [1, 64, 64, 3],
+    "description": "Batch of 1 image, 64 pixels height, 64 pixels width, 3 channels (RGB)",
+    "dtype": "float32",
+    "valueRange": [0.0, 1.0]
+  },
+  "outputSpec": {
+    "shape": [1, 5],
+    "activation": "softmax",
+    "description": "5 probability scores (one per skin class) summing to 1.0",
+    "classOrder": ["acne", "dry", "oily", "normal", "pigmentation"]
+  },
+  "layers": [
+    {
+      "index": 0,
+      "name": "conv2d_1",
+      "type": "Conv2D",
+      "filters": 8,
+      "kernelSize": [3, 3],
+      "activation": "relu",
+      "inputShape": [64, 64, 3],
+      "outputShape": [62, 62, 8],
+      "parameters": 224,
+      "purpose": "Detects low-level visual features: edges, color gradients, and spot boundaries in skin images"
+    },
+    {
+      "index": 1,
+      "name": "max_pooling2d_1",
+      "type": "MaxPooling2D",
+      "poolSize": [2, 2],
+      "inputShape": [62, 62, 8],
+      "outputShape": [31, 31, 8],
+      "parameters": 0,
+      "purpose": "Reduces spatial dimensions by 2x, retaining the strongest detected features and improving translation invariance"
+    },
+    {
+      "index": 2,
+      "name": "conv2d_2",
+      "type": "Conv2D",
+      "filters": 16,
+      "kernelSize": [3, 3],
+      "activation": "relu",
+      "inputShape": [31, 31, 8],
+      "outputShape": [29, 29, 16],
+      "parameters": 1168,
+      "purpose": "Detects higher-level patterns: textures, shine regions, flake clusters, and pigmentation patches"
+    },
+    {
+      "index": 3,
+      "name": "max_pooling2d_2",
+      "type": "MaxPooling2D",
+      "poolSize": [2, 2],
+      "inputShape": [29, 29, 16],
+      "outputShape": [14, 14, 16],
+      "parameters": 0,
+      "purpose": "Second spatial downsampling. Reduces noise and focuses on globally significant features"
+    },
+    {
+      "index": 4,
+      "name": "flatten_1",
+      "type": "Flatten",
+      "inputShape": [14, 14, 16],
+      "outputShape": [3136],
+      "parameters": 0,
+      "purpose": "Converts the 3D feature map tensor into a 1D vector for input to the fully-connected dense layers"
+    },
+    {
+      "index": 5,
+      "name": "dense_1",
+      "type": "Dense",
+      "units": 32,
+      "activation": "relu",
+      "inputShape": [3136],
+      "outputShape": [32],
+      "parameters": 100384,
+      "purpose": "Hidden layer that learns abstract combinations of visual features. Most of the model's classification power lives here"
+    },
+    {
+      "index": 6,
+      "name": "dense_output",
+      "type": "Dense",
+      "units": 5,
+      "activation": "softmax",
+      "inputShape": [32],
+      "outputShape": [5],
+      "parameters": 165,
+      "purpose": "Output layer. Converts the 32-unit representation to 5 probability scores — one per skin condition class"
+    }
+  ],
+  "training": {
+    "optimizer": "Adam",
+    "lossFunction": "categoricalCrossentropy",
+    "metrics": ["accuracy"],
+    "epochs": 5,
+    "batchSize": 8,
+    "datasetSize": 100,
+    "samplesPerClass": 20,
+    "classesCount": 5
+  },
+  "fullPipelineFlow": [
+    { "step": 1, "name": "User Input",            "file": "index.html",                    "description": "User uploads face image or enables webcam" },
+    { "step": 2, "name": "Image Validation",      "file": "app.js",                        "description": "Blur, resolution, lighting, and face presence checks" },
+    { "step": 3, "name": "Preprocessing",         "file": "app.js → tf.browser.fromPixels", "description": "Resize to 64x64, normalize pixels to [0,1], expand dims to [1,64,64,3]" },
+    { "step": 4, "name": "Face Region Extract",   "file": "app.js → canvas drawImage",     "description": "Canvas crops the facial skin region into a 64x64 pixel segment" },
+    { "step": 5, "name": "Feature Extraction",    "file": "model/model_bundle.js (CNN)",   "description": "conv2d_1 and conv2d_2 extract edges, textures, spots, reflections" },
+    { "step": 6, "name": "Classification",        "file": "model/model_bundle.js (Dense)", "description": "dense_output with softmax returns 5-class probability vector" },
+    { "step": 7, "name": "Confidence Scoring",    "file": "app.js → updateAISkinUI()",     "description": "Highest probability class becomes the primary diagnosis" },
+    { "step": 8, "name": "Severity Scoring",      "file": "model/metadata_severity.json",  "description": "Confidence score mapped to mild/moderate/severe badge" },
+    { "step": 9, "name": "Routine Generation",    "file": "model/metadata_routines.json",  "description": "Morning and night routine steps fetched from metadata" },
+    { "step": 10, "name": "Product Recommendation","file": "model/metadata_products.json", "description": "3 curated products matched to dominant skin condition" }
+  ]
+}

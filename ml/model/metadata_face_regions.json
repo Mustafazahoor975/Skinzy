@@ -1,0 +1,47 @@
+{
+  "_description": "Face Region Extraction Stage - Step 4 of the FaceMed AI Pipeline",
+  "_stage": "face_region_extraction",
+  "method": "canvas_crop",
+  "description": "After validation, the AI extracts only the clinically relevant facial skin regions. Background elements (walls, clothing, furniture) are excluded to focus analysis on actual skin pixels.",
+  "extractedRegions": [
+    {
+      "name": "forehead",
+      "anatomicalZone": "T-Zone",
+      "clinicalRelevance": "Primary zone for oiliness, acne, and pore size evaluation",
+      "approxPositionPercentX": [20, 80],
+      "approxPositionPercentY": [5, 28]
+    },
+    {
+      "name": "leftCheek",
+      "anatomicalZone": "Cheek",
+      "clinicalRelevance": "Hydration level, redness, pigmentation and erythema analysis",
+      "approxPositionPercentX": [5, 35],
+      "approxPositionPercentY": [35, 65]
+    },
+    {
+      "name": "rightCheek",
+      "anatomicalZone": "Cheek",
+      "clinicalRelevance": "Hydration level, redness, pigmentation and erythema analysis",
+      "approxPositionPercentX": [65, 95],
+      "approxPositionPercentY": [35, 65]
+    },
+    {
+      "name": "nose",
+      "anatomicalZone": "T-Zone",
+      "clinicalRelevance": "Sebum secretion, blackhead visibility and pore dilation",
+      "approxPositionPercentX": [35, 65],
+      "approxPositionPercentY": [35, 60]
+    },
+    {
+      "name": "chin",
+      "anatomicalZone": "U-Zone",
+      "clinicalRelevance": "Hormonal acne spots and skin dryness",
+      "approxPositionPercentX": [30, 70],
+      "approxPositionPercentY": [68, 88]
+    }
+  ],
+  "ignoredRegions": [
+    "background", "hair", "eyebrows", "eyelids", "lips", "nostrils"
+  ],
+  "implementation": "The canvas captures a 64x64 pixel crop of the skin region from the HTML5 Canvas element. The full face canvas is used as input and skin-only regions are weighted higher in the CNN feature maps via learned filters."
+}

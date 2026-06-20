@@ -1,0 +1,92 @@
+{
+  "_description": "Skin Classification Categories - Step 6 of the FaceMed AI Pipeline",
+  "_stage": "classification",
+  "numClasses": 5,
+  "outputActivation": "softmax",
+  "description": "The final Dense layer uses softmax activation to produce 5 probability scores that sum to 1.0. The class with the highest probability is the dominant skin condition.",
+  "classes": [
+    {
+      "id": 0,
+      "key": "acne",
+      "displayName": "Acne Vulgaris Profile",
+      "color": "#ef4444",
+      "description": "Characterized by inflammatory breakouts, blocked follicles, papules, and pustules. Caused by excess sebum, bacterial growth, and hormonal imbalance.",
+      "clinicalMarkers": [
+        "Red circular spots with white/yellow centers",
+        "Inflamed papules and nodules",
+        "Clogged pores and blackheads",
+        "Localized redness and swelling"
+      ],
+      "keyPixelSignature": "High R-channel spots on peach skin base",
+      "prevalence": "Affects ~85% of people aged 12-24"
+    },
+    {
+      "id": 1,
+      "key": "dry",
+      "displayName": "Dehydrated Dry Skin",
+      "color": "#ffd700",
+      "description": "Low skin hydration, compromised lipid barrier, visible flaking and scaling. Skin appears dull and rough to touch.",
+      "clinicalMarkers": [
+        "Visible white flake particles on skin surface",
+        "Desaturated / low-chroma skin tone",
+        "Tightness and rough texture",
+        "Reduced skin elasticity"
+      ],
+      "keyPixelSignature": "Desaturated base with random bright flake speckles",
+      "prevalence": "Affects ~30% of adults; higher in cold/dry climates"
+    },
+    {
+      "id": 2,
+      "key": "oily",
+      "displayName": "Excessive Oily Skin",
+      "color": "#6366f1",
+      "description": "Overactive sebaceous glands produce excess oil. Skin appears shiny and reflective, especially in the T-zone.",
+      "clinicalMarkers": [
+        "Glossy specular reflections on forehead and nose",
+        "Enlarged, visible pores",
+        "Thick skin texture",
+        "Frequent breakouts from sebum buildup"
+      ],
+      "keyPixelSignature": "Bright white reflection blobs on T-zone regions",
+      "prevalence": "Affects ~40% of adults; more common in humid climates"
+    },
+    {
+      "id": 3,
+      "key": "normal",
+      "displayName": "Balanced Normal Skin",
+      "color": "#22c55e",
+      "description": "Healthy, balanced skin with adequate hydration and minimal visible concerns. Pores are small and skin tone is even.",
+      "clinicalMarkers": [
+        "Even, uniform skin tone",
+        "No visible excess oil or flaking",
+        "Small, minimally visible pores",
+        "Smooth texture with natural glow"
+      ],
+      "keyPixelSignature": "Uniform peach skin tone with minimal variation",
+      "prevalence": "Approximately 10-20% of adults"
+    },
+    {
+      "id": 4,
+      "key": "pigmentation",
+      "displayName": "Hyperpigmentation Profile",
+      "color": "#a855f7",
+      "description": "Uneven melanin distribution causing dark spots, patches, and uneven skin tone. Caused by UV exposure, hormonal changes, or post-inflammatory response.",
+      "clinicalMarkers": [
+        "Dark elliptical patches (melasma, sun spots)",
+        "Uneven skin tone across face regions",
+        "Post-inflammatory hyperpigmentation spots",
+        "Irregular color distribution"
+      ],
+      "keyPixelSignature": "Dark elliptical patches with all RGB channels depressed",
+      "prevalence": "Affects ~70% of pregnant women; up to 20% of general population"
+    }
+  ],
+  "exampleOutput": {
+    "acne": 0.87,
+    "dry": 0.11,
+    "oily": 0.72,
+    "normal": 0.04,
+    "pigmentation": 0.43,
+    "interpretation": "Highest score is acne (0.87 = 87%). Primary condition: Acne Vulgaris. Secondary concern: Oily Skin (72%)."
+  }
+}

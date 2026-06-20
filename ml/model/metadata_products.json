@@ -1,0 +1,412 @@
+{
+  "_description": "Product Recommendation Database (generated from metadata/products.csv)",
+  "_stage": "product_recommendation",
+  "productDatabase": {
+    "acne": [
+      {
+        "name": "Saeed Ghani Neem Face Wash",
+        "brand": "Saeed Ghani",
+        "category": "Face Wash",
+        "desc": "Face Wash — Budget tier product. Price: Rs. 450",
+        "price": "Rs. 450",
+        "tier": "Budget",
+        "link": "#"
+      },
+      {
+        "name": "Derma Shine Acne Wash",
+        "brand": "Derma Shine",
+        "category": "Face Wash",
+        "desc": "Face Wash — Budget tier product. Price: Rs. 650",
+        "price": "Rs. 650",
+        "tier": "Budget",
+        "link": "#"
+      },
+      {
+        "name": "MandelAC Serum",
+        "brand": "Jenpharm",
+        "category": "Serum",
+        "desc": "Serum — Mid-Range tier product. Price: Rs. 1200",
+        "price": "Rs. 1200",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Niacinamide Serum",
+        "brand": "Vince",
+        "category": "Serum",
+        "desc": "Serum — Mid-Range tier product. Price: Rs. 1450",
+        "price": "Rs. 1450",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Neutrogena Acne Wash",
+        "brand": "Neutrogena",
+        "category": "Cleanser",
+        "desc": "Cleanser — Premium tier product. Price: Rs. 3500",
+        "price": "Rs. 3500",
+        "tier": "Premium",
+        "link": "#"
+      },
+      {
+        "name": "Vince Mild Wash",
+        "brand": "Vince",
+        "category": "Face Wash",
+        "desc": "Face Wash — Budget tier product. Price: Rs. 850",
+        "price": "Rs. 850",
+        "tier": "Budget",
+        "link": "#"
+      },
+      {
+        "name": "Azelaic Acid 10%",
+        "brand": "The Ordinary",
+        "category": "Treatment",
+        "desc": "Treatment — Premium tier product. Price: Rs. 2800",
+        "price": "Rs. 2800",
+        "tier": "Premium",
+        "link": "#"
+      },
+      {
+        "name": "Nizoral Cream",
+        "brand": "Janssen",
+        "category": "Treatment",
+        "desc": "Treatment — Mid-Range tier product. Price: Rs. 850",
+        "price": "Rs. 850",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Nizoral Shampoo (as wash)",
+        "brand": "Janssen",
+        "category": "Face Wash",
+        "desc": "Face Wash — Mid-Range tier product. Price: Rs. 1650",
+        "price": "Rs. 1650",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Dermive Oil Free",
+        "brand": "Jenpharm",
+        "category": "Moisturizer",
+        "desc": "Moisturizer — Mid-Range tier product. Price: Rs. 1150",
+        "price": "Rs. 1150",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Benzac AC 5% Gel",
+        "brand": "Galderma",
+        "category": "Treatment",
+        "desc": "Treatment — Mid-Range tier product. Price: Rs. 1850",
+        "price": "Rs. 1850",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "DermaV AC Gel",
+        "brand": "Jenpharm",
+        "category": "Treatment",
+        "desc": "Treatment — Mid-Range tier product. Price: Rs. 1100",
+        "price": "Rs. 1100",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "CeraVe Acne Control",
+        "brand": "CeraVe",
+        "category": "Cleanser",
+        "desc": "Cleanser — Premium tier product. Price: Rs. 4200",
+        "price": "Rs. 4200",
+        "tier": "Premium",
+        "link": "#"
+      },
+      {
+        "name": "Salicylic Acid 2%",
+        "brand": "The Ordinary",
+        "category": "Exfoliant",
+        "desc": "Exfoliant — Premium tier product. Price: Rs. 2800",
+        "price": "Rs. 2800",
+        "tier": "Premium",
+        "link": "#"
+      },
+      {
+        "name": "BHA Exfoliating Toner",
+        "brand": "Primary",
+        "category": "Exfoliant",
+        "desc": "Exfoliant — Mid-Range tier product. Price: Rs. 1850",
+        "price": "Rs. 1850",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Betadine Solution",
+        "brand": "Mundipharma",
+        "category": "Antiseptic",
+        "desc": "Antiseptic — Budget tier product. Price: Rs. 350",
+        "price": "Rs. 350",
+        "tier": "Budget",
+        "link": "#"
+      },
+      {
+        "name": "Pyodine",
+        "brand": "Generic",
+        "category": "Antiseptic",
+        "desc": "Antiseptic — Budget tier product. Price: Rs. 200",
+        "price": "Rs. 200",
+        "tier": "Budget",
+        "link": "#"
+      },
+      {
+        "name": "Hibiscrub Wash",
+        "brand": "Mölnlycke",
+        "category": "Face Wash",
+        "desc": "Face Wash — Mid-Range tier product. Price: Rs. 950",
+        "price": "Rs. 950",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Benzoyl Peroxide 5%",
+        "brand": "Benzac",
+        "category": "Treatment",
+        "desc": "Treatment — Mid-Range tier product. Price: Rs. 1200",
+        "price": "Rs. 1200",
+        "tier": "Mid-Range",
+        "link": "#"
+      }
+    ],
+    "dry": [
+      {
+        "name": "Physiogel Hypoallergenic",
+        "brand": "Physiogel",
+        "category": "Moisturizer",
+        "desc": "Moisturizer — Premium tier product. Price: Rs. 3200",
+        "price": "Rs. 3200",
+        "tier": "Premium",
+        "link": "#"
+      },
+      {
+        "name": "Cetaphil Gentle Cleanser",
+        "brand": "Cetaphil",
+        "category": "Cleanser",
+        "desc": "Cleanser — Premium tier product. Price: Rs. 2200",
+        "price": "Rs. 2200",
+        "tier": "Premium",
+        "link": "#"
+      },
+      {
+        "name": "Ketoconazole Shampoo",
+        "brand": "Nizoral",
+        "category": "Treatment",
+        "desc": "Treatment — Mid-Range tier product. Price: Rs. 1750",
+        "price": "Rs. 1750",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Physiogel Calming Relief",
+        "brand": "Physiogel",
+        "category": "Moisturizer",
+        "desc": "Moisturizer — Premium tier product. Price: Rs. 3500",
+        "price": "Rs. 3500",
+        "tier": "Premium",
+        "link": "#"
+      },
+      {
+        "name": "Derma Shine Mild",
+        "brand": "Derma Shine",
+        "category": "Cleanser",
+        "desc": "Cleanser — Budget tier product. Price: Rs. 750",
+        "price": "Rs. 750",
+        "tier": "Budget",
+        "link": "#"
+      },
+      {
+        "name": "CeraVe Psoriasis Cream",
+        "brand": "CeraVe",
+        "category": "Moisturizer",
+        "desc": "Moisturizer — Premium tier product. Price: Rs. 4500",
+        "price": "Rs. 4500",
+        "tier": "Premium",
+        "link": "#"
+      },
+      {
+        "name": "Dermive Urea",
+        "brand": "Jenpharm",
+        "category": "Moisturizer",
+        "desc": "Moisturizer — Mid-Range tier product. Price: Rs. 1450",
+        "price": "Rs. 1450",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Dermive Urea 10%",
+        "brand": "Jenpharm",
+        "category": "Moisturizer",
+        "desc": "Moisturizer — Mid-Range tier product. Price: Rs. 1450",
+        "price": "Rs. 1450",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "CeraVe SA Cream",
+        "brand": "CeraVe",
+        "category": "Moisturizer",
+        "desc": "Moisturizer — Premium tier product. Price: Rs. 4800",
+        "price": "Rs. 4800",
+        "tier": "Premium",
+        "link": "#"
+      }
+    ],
+    "oily": [
+      {
+        "name": "Derma Shine Soft Cleanser",
+        "brand": "Derma Shine",
+        "category": "Cleanser",
+        "desc": "Cleanser — Budget tier product. Price: Rs. 850",
+        "price": "Rs. 850",
+        "tier": "Budget",
+        "link": "#"
+      },
+      {
+        "name": "Dermive Oil Free",
+        "brand": "Jenpharm",
+        "category": "Moisturizer",
+        "desc": "Moisturizer — Mid-Range tier product. Price: Rs. 1150",
+        "price": "Rs. 1150",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Vitamin B3 Niacinamide",
+        "brand": "Organic Traveller",
+        "category": "Serum",
+        "desc": "Serum — Mid-Range tier product. Price: Rs. 1850",
+        "price": "Rs. 1850",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Niacinamide 10%",
+        "brand": "The Ordinary",
+        "category": "Serum",
+        "desc": "Serum — Premium tier product. Price: Rs. 2400",
+        "price": "Rs. 2400",
+        "tier": "Premium",
+        "link": "#"
+      },
+      {
+        "name": "Pore Tightening",
+        "brand": "Organic Traveller",
+        "category": "Serum",
+        "desc": "Serum — Mid-Range tier product. Price: Rs. 1850",
+        "price": "Rs. 1850",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Retinol 0.5%",
+        "brand": "The Ordinary",
+        "category": "Serum",
+        "desc": "Serum — Premium tier product. Price: Rs. 3200",
+        "price": "Rs. 3200",
+        "tier": "Premium",
+        "link": "#"
+      }
+    ],
+    "normal": [
+      {
+        "name": "Spectra Block SPF 60",
+        "brand": "Jenpharm",
+        "category": "Sunscreen",
+        "desc": "Sunscreen — Mid-Range tier product. Price: Rs. 1250",
+        "price": "Rs. 1250",
+        "tier": "Mid-Range",
+        "link": "#"
+      }
+    ],
+    "pigmentation": [
+      {
+        "name": "Vitamin C Serum",
+        "brand": "Jenpharm",
+        "category": "Serum",
+        "desc": "Serum — Mid-Range tier product. Price: Rs. 1550",
+        "price": "Rs. 1550",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Quench Vitamin C",
+        "brand": "Organic Traveller",
+        "category": "Serum",
+        "desc": "Serum — Premium tier product. Price: Rs. 2100",
+        "price": "Rs. 2100",
+        "tier": "Premium",
+        "link": "#"
+      },
+      {
+        "name": "Spectra Block SPF 60",
+        "brand": "Jenpharm",
+        "category": "Sunscreen",
+        "desc": "Sunscreen — Mid-Range tier product. Price: Rs. 1250",
+        "price": "Rs. 1250",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Sunstop SPF 100",
+        "brand": "Jenpharm",
+        "category": "Sunscreen",
+        "desc": "Sunscreen — Mid-Range tier product. Price: Rs. 1750",
+        "price": "Rs. 1750",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Eucerin Daily Protection",
+        "brand": "Eucerin",
+        "category": "Moisturizer",
+        "desc": "Moisturizer — Premium tier product. Price: Rs. 3500",
+        "price": "Rs. 3500",
+        "tier": "Premium",
+        "link": "#"
+      },
+      {
+        "name": "Vince Whitening Wash",
+        "brand": "Vince",
+        "category": "Face Wash",
+        "desc": "Face Wash — Budget tier product. Price: Rs. 850",
+        "price": "Rs. 850",
+        "tier": "Budget",
+        "link": "#"
+      },
+      {
+        "name": "Alpha Arbutin 2%",
+        "brand": "The Ordinary",
+        "category": "Serum",
+        "desc": "Serum — Premium tier product. Price: Rs. 2800",
+        "price": "Rs. 2800",
+        "tier": "Premium",
+        "link": "#"
+      },
+      {
+        "name": "Vitamin C",
+        "brand": "Jenpharm",
+        "category": "Serum",
+        "desc": "Serum — Mid-Range tier product. Price: Rs. 1550",
+        "price": "Rs. 1550",
+        "tier": "Mid-Range",
+        "link": "#"
+      },
+      {
+        "name": "Alpha Arbutin",
+        "brand": "Organic Traveller",
+        "category": "Serum",
+        "desc": "Serum — Mid-Range tier product. Price: Rs. 1950",
+        "price": "Rs. 1950",
+        "tier": "Mid-Range",
+        "link": "#"
+      }
+    ]
+  }
+}

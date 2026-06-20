@@ -1,0 +1,59 @@
+{
+  "_description": "Feature Extraction Stage - Step 5 of the FaceMed AI Pipeline",
+  "_stage": "feature_extraction",
+  "method": "CNN_convolutional_filters",
+  "description": "The CNN's convolutional layers automatically learn to extract visual features from skin images. No manual feature engineering is required. The following are the key biological patterns the model learns to detect:",
+  "learnedFeatures": [
+    {
+      "featureName": "Texture Roughness",
+      "layer": "conv2d_1",
+      "description": "Detects whether skin surface appears smooth or coarse. Rough texture correlates with dryness and flakiness.",
+      "relatedConditions": ["dry", "normal"],
+      "visualSignal": "High spatial frequency micro-texture variations in pixel intensity"
+    },
+    {
+      "featureName": "Specular Reflection / Shine",
+      "layer": "conv2d_1",
+      "description": "Identifies bright glossy patches on facial skin caused by excess sebum oil. Bright elliptical blobs on the T-zone are strong oily indicators.",
+      "relatedConditions": ["oily"],
+      "visualSignal": "Localized high-intensity white regions with soft gradient edges"
+    },
+    {
+      "featureName": "Red Inflammatory Spots",
+      "layer": "conv2d_1",
+      "description": "Detects small circular regions with high red channel (R) and low green/blue channels (G, B). Indicates active acne lesions or papules.",
+      "relatedConditions": ["acne"],
+      "visualSignal": "High R-channel circular blobs with white/yellow centers"
+    },
+    {
+      "featureName": "Melanin Dark Patches",
+      "layer": "conv2d_2",
+      "description": "Detects elliptical regions where all RGB channels are depressed relative to surrounding skin. Indicates hyperpigmentation or melasma deposits.",
+      "relatedConditions": ["pigmentation"],
+      "visualSignal": "Irregular elliptical dark patches with blurred soft edges"
+    },
+    {
+      "featureName": "Flaking / Scaling Patterns",
+      "layer": "conv2d_2",
+      "description": "Detects high-frequency white speckle noise over a desaturated skin background. Indicates dry, flaky skin with low lipid content.",
+      "relatedConditions": ["dry"],
+      "visualSignal": "Random bright white pixel clusters over desaturated base skin tone"
+    },
+    {
+      "featureName": "Color Uniformity",
+      "layer": "dense_1",
+      "description": "After pooling, the dense layer evaluates whether skin tone is evenly distributed. High variance between regions may signal pigmentation issues.",
+      "relatedConditions": ["normal", "pigmentation"],
+      "visualSignal": "Global RGB channel variance across the 64x64 pixel region"
+    }
+  ],
+  "layerOutputShapes": {
+    "conv2d_1": [62, 62, 8],
+    "max_pooling2d_1": [31, 31, 8],
+    "conv2d_2": [29, 29, 16],
+    "max_pooling2d_2": [14, 14, 16],
+    "flatten_1": [3136],
+    "dense_1": [32],
+    "dense_output": [5]
+  }
+}

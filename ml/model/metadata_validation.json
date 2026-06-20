@@ -1,0 +1,34 @@
+{
+  "_description": "Image Validation Stage - Step 2 of the FaceMed AI Pipeline",
+  "_stage": "validation",
+  "blurDetection": {
+    "enabled": true,
+    "method": "laplacianVariance",
+    "threshold": 80,
+    "description": "If the variance of the Laplacian filter applied to the image is below the threshold, the image is considered too blurry.",
+    "rejectMessage": "Image is too blurry. Please upload a sharper photo."
+  },
+  "resolutionCheck": {
+    "enabled": true,
+    "minWidth": 100,
+    "minHeight": 100,
+    "maxWidth": 4096,
+    "maxHeight": 4096,
+    "description": "Image must be at least 100x100 pixels to ensure enough detail for skin analysis.",
+    "rejectMessage": "Image resolution too low. Minimum required: 100x100 pixels."
+  },
+  "faceDetection": {
+    "enabled": true,
+    "method": "tensorflowjs_faceapi",
+    "minFaceScore": 0.75,
+    "description": "Uses TensorFlow.js Face Detection API to verify a human face is present in the image.",
+    "rejectMessage": "No face detected. Please upload a clear frontal face photo."
+  },
+  "lightingCheck": {
+    "enabled": true,
+    "minBrightness": 30,
+    "maxBrightness": 225,
+    "description": "Average pixel luminance must fall within acceptable range. Too dark or overexposed images are rejected.",
+    "rejectMessage": "Image lighting is too dark or overexposed. Please use natural light."
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "_description": "Skincare Routine Database (generated from metadata/severity.csv)",
+  "_stage": "routine_generation",
+  "routineDatabase": {
+    "acne": {
+      "targetCondition": "Acne",
+      "morning": {
+        "summary": "Cleanser (Salicylic acid wash); Serum (Niacinamide); Moisturizer (Oil-free); Sunscreen (SPF 30+)",
+        "steps": [
+          {
+            "step": 1,
+            "product": "Cleanser (Salicylic acid wash)"
+          },
+          {
+            "step": 2,
+            "product": "Serum (Niacinamide)"
+          },
+          {
+            "step": 3,
+            "product": "Moisturizer (Oil-free)"
+          },
+          {
+            "step": 4,
+            "product": "Sunscreen (SPF 30+)"
+          }
+        ]
+      },
+      "night": {
+        "summary": "Cleanser; Treatment (Adapalene pea-sized); Moisturizer",
+        "steps": [
+          {
+            "step": 1,
+            "product": "Cleanser"
+          },
+          {
+            "step": 2,
+            "product": "Treatment (Adapalene pea-sized)"
+          },
+          {
+            "step": 3,
+            "product": "Moisturizer"
+          }
+        ]
+      }
+    },
+    "dry": {
+      "targetCondition": "Dry",
+      "morning": {
+        "summary": "Mild cleanser (or just water); Thick moisturizer (MUST); Sunscreen",
+        "steps": [
+          {
+            "step": 1,
+            "product": "Mild cleanser (or just water)"
+          },
+          {
+            "step": 2,
+            "product": "Thick moisturizer (MUST)"
+          },
+          {
+            "step": 3,
+            "product": "Sunscreen"
+          }
+        ]
+      },
+      "night": {
+        "summary": "Cleanser; Moisturizer (Heavy layer)",
+        "steps": [
+          {
+            "step": 1,
+            "product": "Cleanser"
+          },
+          {
+            "step": 2,
+            "product": "Moisturizer (Heavy layer)"
+          }
+        ]
+      }
+    },
+    "oily": {
+      "targetCondition": "Oily",
+      "morning": {
+        "summary": "Gentle cleanser; Soothing serum (Niacinamide/Aloe); Moisturizer; Sunscreen (MUST)",
+        "steps": [
+          {
+            "step": 1,
+            "product": "Gentle cleanser"
+          },
+          {
+            "step": 2,
+            "product": "Soothing serum (Niacinamide/Aloe)"
+          },
+          {
+            "step": 3,
+            "product": "Moisturizer"
+          },
+          {
+            "step": 4,
+            "product": "Sunscreen (MUST)"
+          }
+        ]
+      },
+      "night": {
+        "summary": "Gentle cleanser; Light moisturizer",
+        "steps": [
+          {
+            "step": 1,
+            "product": "Gentle cleanser"
+          },
+          {
+            "step": 2,
+            "product": "Light moisturizer"
+          }
+        ]
+      }
+    },
+    "normal": {
+      "targetCondition": "Normal",
+      "morning": {
+        "summary": "",
+        "steps": []
+      },
+      "night": {
+        "summary": "",
+        "steps": []
+      }
+    },
+    "pigmentation": {
+      "targetCondition": "Pigmentation",
+      "morning": {
+        "summary": "Gentle cleanser; Vitamin C serum; Moisturizer; Sunscreen (SPF 50+ MUST)",
+        "steps": [
+          {
+            "step": 1,
+            "product": "Gentle cleanser"
+          },
+          {
+            "step": 2,
+            "product": "Vitamin C serum"
+          },
+          {
+            "step": 3,
+            "product": "Moisturizer"
+          },
+          {
+            "step": 4,
+            "product": "Sunscreen (SPF 50+ MUST)"
+          }
+        ]
+      },
+      "night": {
+        "summary": "Cleanser; Niacinamide / Alpha arbutin; Moisturizer",
+        "steps": [
+          {
+            "step": 1,
+            "product": "Cleanser"
+          },
+          {
+            "step": 2,
+            "product": "Niacinamide / Alpha arbutin"
+          },
+          {
+            "step": 3,
+            "product": "Moisturizer"
+          }
+        ]
+      }
+    }
+  }
+}
