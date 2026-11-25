@@ -6,6 +6,10 @@ Skinzy explores how a mobile application can bring together patient–doctor int
 
 > **Project status:** Development prototype. The image-analysis component is not a clinically validated diagnostic tool and is not intended to replace professional medical advice.
 
+## My contribution
+
+**Team project.** My contribution was model training and development of the website frontend and backend. The repository also contains mobile application code; the project should be credited as collaborative work.
+
 ## Project scope
 
 The source includes workflows for:
@@ -73,6 +77,6 @@ Review `ml/model/api.py` for Python dependencies, model paths and service config
 
 ## Developer
 
-**Mustafa Zahoor** · Software Engineering student, University of Central Punjab
+**Mustafa Zahoor** · BS Software Engineering graduate, University of Central Punjab · Completed July 2026
 
 [GitHub profile](https://github.com/Mustafazahoor975) · [Portfolio](https://portfolio-react-js-tan.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/mustafazahoor/)
